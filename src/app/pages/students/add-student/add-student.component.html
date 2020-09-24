@@ -1,0 +1,42 @@
+<h1 mat-dialog-title>Formulario</h1>
+<form [formGroup]="registerForm">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <input matInput placeholder="First Name" formControlName="firstName" required>
+            <mat-error *ngIf="registerForm.controls.firstName.hasError('required')">
+                Please enter First Name
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Last Name" formControlName="lastName" required>
+            <mat-error *ngIf="registerForm.controls.lastName.hasError('required')">
+                Please enter Last Name
+            </mat-error>
+            <mat-error *ngIf="registerForm.controls.grade.hasError('pattern')">
+                Please enter Grade
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="License" formControlName="license" required>
+            <mat-error *ngIf="registerForm.controls.license.hasError('required')">
+                Please enter License
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Age" formControlName="age" required>
+            <mat-error *ngIf="registerForm.controls.age.hasError('required')">
+                Please enter Age
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Sex" formControlName="sex" required>
+            <mat-error *ngIf="registerForm.controls.sex.hasError('required')">
+                Please enter Sex
+            </mat-error>
+        </mat-form-field>
+    </div>
+</form>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button (click)="editStudent()">Save & Exit</button>
+</div>

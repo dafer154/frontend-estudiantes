@@ -60,7 +60,7 @@ editStudent(id:string, student: any): Observable<any>{
 }
 
 deleteStudent(id:string): Observable<any>{
-  return this._http.delete(`${this.BASE_URL}/students/${id}`)
+  return this._http.delete(`${this.BASE_URL}/students/delete/${id}`)
     .pipe(
       map(
         res=>{
