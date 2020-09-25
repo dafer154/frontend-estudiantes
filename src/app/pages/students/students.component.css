@@ -1,3 +1,31 @@
 table {
   width: 100%;
 }
+
+.title{
+    display: flex;
+    justify-content: center;
+    padding-top: 44px;
+}
+
+.wrapp-button{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 29px;
+}
+
+.wrapp-table{
+    padding-bottom: 47px;
+}
+
+.container-buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    padding: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    text-align: center !important;
+}
