@@ -14,7 +14,7 @@ BASE_URL = "http://localhost:4000"
 
 
 addStudent(student: any):Observable<any>{
-  return this._http.post(`${this.BASE_URL}/students/`, student)
+  return this._http.post(`${this.BASE_URL}/students/add`, student)
   .pipe(
     map(
       res =>{

@@ -12,8 +12,11 @@
             <mat-error *ngIf="registerForm.controls.lastName.hasError('required')">
                 Please enter Last Name
             </mat-error>
-            <mat-error *ngIf="registerForm.controls.grade.hasError('pattern')">
-                Please enter Grade
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Grade" formControlName="grade" required>
+            <mat-error *ngIf="registerForm.controls.grade.hasError('required')">
+                Please enter grade
             </mat-error>
         </mat-form-field>
         <mat-form-field>
@@ -37,6 +40,6 @@
     </div>
 </form>
 <div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">Cancel</button>
-    <button mat-button (click)="editStudent()">Save & Exit</button>
+    <button mat-raised-button color="warn" (click)="onNoClick()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="submitStudent()">Save & Exit</button>
 </div>
